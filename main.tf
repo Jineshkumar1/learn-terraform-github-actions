@@ -20,7 +20,7 @@ terraform {
   }
 }
 
-#provider "aws" 
+#provider "aws" Provider block is not required as we are using remote backend
 provider "aws" {
   region = "us-east-1"
 }
