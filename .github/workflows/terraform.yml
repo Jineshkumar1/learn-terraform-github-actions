@@ -71,8 +71,9 @@ jobs:
             })
 
       - name: Terraform Plan Status
-        if: steps.plan.outcome == 'sucess'
-        run: exit 1
+        if: steps.plan.outcome == 'success'  # Run if the plan step succeeds
+        run: echo "Terraform plan was successful!"
+
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
