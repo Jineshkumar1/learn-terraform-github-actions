@@ -11,14 +11,16 @@ terraform {
   }
   required_version = "~> 1.0"
 
-  backend "remote" {
-    organization = "JineshTF"
+  cloud { 
+    
+    organization = "JineshTF" 
 
-    workspaces {
-      name = "demo-github-actions"
-    }
-  }
+    workspaces { 
+      name = "demo-github-actions" 
+    } 
+  } 
 }
+
 
 provider "aws" {
   region = "us-east-1"
