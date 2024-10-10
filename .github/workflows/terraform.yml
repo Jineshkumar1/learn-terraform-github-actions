@@ -1,4 +1,4 @@
-name: "Terraform"
+sname: "Terraform"
 
 on:
   push:
@@ -71,7 +71,7 @@ jobs:
             })
 
       - name: Terraform Plan Status
-        if: steps.plan.outcome == 'failure'
+        if: steps.plan.outcome == 'sucess'
         run: exit 1
 
       - name: Terraform Apply
